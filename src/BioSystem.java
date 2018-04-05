@@ -199,7 +199,8 @@ public class BioSystem {
 
                 bs.performAction();
 
-                if((bs.getTimeElapsed()%preciseInterval >= 0. && bs.getTimeElapsed()%preciseInterval <= 0.01) && !alreadyPreciselyRecorded){
+                if((bs.getTimeElapsed()%preciseInterval >= 0. && bs.getTimeElapsed()%preciseInterval <= 0.01) && !alreadyPreciselyRecorded &&
+                        preciseTimerCounter <= nTimeMeasurements){
 
                     System.out.println("rep: "+r+"\ttime elapsed: "+String.valueOf(bs.getTimeElapsed())+"\tPRECISE");
                     precisePopsOverTime[preciseTimerCounter] = bs.getSpatialDistributionArray();
