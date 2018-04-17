@@ -18,7 +18,7 @@ public class Bacteria {
 
         double mu = s/(K_prime+s);
         double mu_max = s_max/(K_prime+s_max);
-        return 10. - 9.*mu/mu_max;
+        return 1. + 9.*mu/mu_max;
     }
 
     public double growthRate(double c, double s, double s_max){
